@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فروشگاه آنلاین حرفه‌ای</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <span class="logo"><i class="bi bi-bag"></i> فروشگاه حرفه‌ای</span>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="جستجوی محصول...">
+        <button type="submit"><i class="bi bi-search"></i></button>
+      </form>
+      <div class="cart-btn" onclick="toggleCart()">
+        <i class="bi bi-cart"></i>
+        <span id="cartCount">0</span>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <div class="slider">
+      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="slider">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="slider">
+    </div>
+  </header>
+  <main>
+    <section class="categories" id="categories"></section>
+    <section class="products" id="products"></section>
+  </main>
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <h3>سبد خرید</h3>
+      <ul id="cartItems"></ul>
+      <div class="cart-total">
+        جمع کل: <span id="cartTotal">۰</span> تومان
+      </div>
+      <button onclick="checkout()" class="checkout-btn">پرداخت</button>
+      <button onclick="toggleCart()" class="close-btn">بستن</button>
+    </div>
+  </div>
+  <footer>
+    <p>© 2024 فروشگاه حرفه‌ای | طراحی با ❤️</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
